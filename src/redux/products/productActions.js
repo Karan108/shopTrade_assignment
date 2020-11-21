@@ -33,8 +33,15 @@ export const fetchProducts = () => {
 }
 
 export const filterProducts = (tag) => {
-    return (dispatch, getState) => {
-        const products = getState().products.products.filter(ele => ele.tag === tag);
-        dispatch(fetchProductsSuccess(products))
+    return (dispatch) => {
+        axios.get('https://cdn.shopify.com/s/files/1/0455/2176/4502/files/product.json?v=1604154041').then(res => {
+            const products = res.data
+            dispatch(fetchProductsSuccess(products.filter(ele => ele.tag === tag)))
+        }).catch(error => {
+            const errorMsg = error.message
+            dispatch(fetchProductsFailure(errorMsg))
+        })
+        // const products = getState().products.products.filter(ele => ele.tag === tag);
+        // dispatch(fetchProductsSuccess(products))
     }
 }
