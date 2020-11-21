@@ -1,0 +1,53 @@
+.header {
+    /* position: absolute; */
+    width: 100%;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+
+.header>.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header>.menu p {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.icons>img,
+.logo {
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.header__icons__basketItems {
+    position: relative;
+}
+
+.header__icons__basketItems {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 19px;
+    height: 19px;
+    color: white;
+    border-radius: 50%;
+    background: #E64C09;
+}

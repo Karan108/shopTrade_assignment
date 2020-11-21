@@ -1,0 +1,32 @@
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    /* margin-left: 10px; */
+}
+
+.left>.button {
+    padding: 7px;
+    border-radius: 20px;
+    height: 29px;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.right>.button {
+    padding: 7px;
+    border-radius: 20px;
+    height: 29px;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
